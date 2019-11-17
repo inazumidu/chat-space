@@ -1,4 +1,4 @@
- $(function() {
+$(function() {
   function addUser(user) {
     let html = `
       <div class="chat-group-user clearfix">
@@ -29,9 +29,8 @@
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
   }
-  
-   document.addEventListener("turbolinks:load", function(){
-    $("#user-search-field").on("keyup", function() {
+  document.addEventListener("turbolinks:load", function(){
+  $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
     $.ajax({
       type: "GET",
@@ -55,8 +54,8 @@
       .fail(function() {
         alert("通信エラーです。ユーザーが表示できません。");
       });
-    
-   });
+  });
+})
   $(document).on("click", ".chat-group-user__btn--add", function() {
     console.log
     const userName = $(this).attr("data-user-name");
