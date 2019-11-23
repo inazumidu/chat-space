@@ -68,5 +68,9 @@ $(function() {
     });
   };
 };
+<<<<<<< HEAD
  setInterval(reloadMessages, 7000);
+=======
+ setInterval(reloadMessages, 700);
+>>>>>>> 6891448be2f2355248150e99567d80f3f3633ca3
 });
