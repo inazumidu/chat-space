@@ -20,6 +20,7 @@ $(function() {
         </div>`
     return html;
   }
+
   document.addEventListener("turbolinks:load", function(){
   $('.new_message').on('submit', function(e){
   e.preventDefault();
@@ -68,5 +69,5 @@ $(function() {
     });
   };
 };
- setInterval(reloadMessages, 700);
+ setInterval(reloadMessages, 7000);
 });

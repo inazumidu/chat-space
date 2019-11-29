@@ -29,6 +29,7 @@ $(function() {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
   }
+  document.addEventListener("turbolinks:load", function(){
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
     $.ajax({
@@ -53,6 +54,7 @@ $(function() {
       .fail(function() {
         alert("通信エラーです。ユーザーが表示できません。");
       });
+  });
   });
   $(document).on("click", ".chat-group-user__btn--add", function() {
     console.log
